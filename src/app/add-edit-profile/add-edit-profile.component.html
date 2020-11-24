@@ -1,0 +1,75 @@
+<form [formGroup]="newDataForm" (ngSubmit)="saveData()">
+  <div class="modal-header">
+    <h4 class="modal-title">Visit Form</h4>
+    <span class="material-icons closeIcon" (click)="activeModal.dismiss()">
+      cancel
+    </span>
+  </div>
+  <div class="modal-body">
+    <div class="modal-scroll">
+      <div>
+        <div formGroupName="Data">
+          <div class="row">
+         
+            <div class="col-md-4">
+              <div class="form-group">
+                <label>City<span class="madateField">*</span></label>
+                <input  type="text" class="form-control"
+                  formControlName="city">
+              </div>
+              <div class="form-group">
+                <label>Price<span class="madateField">*</span></label>
+                
+                <input type="number"  formControlName="Price"  class="form-control" id="points" min="0" name="points" step="1">
+                
+
+          
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label>Start Date</label>
+                <input [owlDateTimeTrigger]="dt" [owlDateTime]="dt"  formControlName ="startDate" class="Date-Selected form-control">
+                <owl-date-time  [pickerType]="'calendar'" #dt></owl-date-time>              
+         
+              </div>
+              <div class="form-group">
+                <label>Status<span class="madateField">*</span></label>
+              
+                <input type="text" class="form-control" formControlName="status">
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label>End Date</label>
+                <input [owlDateTimeTrigger]="dt1" [owlDateTime]="dt1"   formControlName ="endDate" class="Date-Selected form-control" appendTo="body">
+                <owl-date-time [pickerType]="'calendar'" #dt1></owl-date-time>
+             
+              </div>
+              <div class="form-group">
+                <label>Color<span class="madateField">*</span></label>
+                <input type="text" class="form-control" formControlName="color">
+             
+              </div>
+            </div>
+          </div>
+        </div>
+      
+     
+    
+   
+      </div>
+    </div>
+  </div>
+
+ 
+
+  <div class="modal-footer">
+    <button type="submit" #submitButton class="btn btn-primary" (click)="saveData()">Save</button>
+
+
+
+  </div>
+
+</form>
+

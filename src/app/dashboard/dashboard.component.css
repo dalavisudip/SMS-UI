@@ -1,0 +1,32 @@
+.wrapper-div{
+    background-color: aliceblue;
+    height: calc(100vh);
+    overflow: hidden;
+}
+.title{
+    color: black;
+    text-align: center;
+    padding: 15px 0;
+}
+.table-div{
+    padding: 1% 4%;
+}
+.addBtn{
+    float: right;
+    margin-bottom: 5px;
+}
+
+.nextArrow{
+padding-right: 3px;
+    vertical-align: bottom;
+}
+         
+         
+.div-height{
+    height: 20px;
+    width: 70px;
+}
+
+.sort-icon{
+    cursor: pointer;
+}
